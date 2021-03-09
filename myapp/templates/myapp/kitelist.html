@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KiteList</title>
+</head>
+<body>
+
+    {% for kite in kite_list %}
+        <h1>Record# {{kite.id}}</h1>
+        <h2><a href="{% url 'myapp:detail' kite.pk %}">KiteName: {{kite.kite_name}}</a></h2>
+        <h2><a href="{% url 'myapp:detail' kite.pk %}">KiteCategory: {{kite.kite_category}}</a></h2><br>
+    {% endfor %}
+
+</body>
+</html>

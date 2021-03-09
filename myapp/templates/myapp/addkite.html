@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Kite--</title>
+</head>
+<body>
+    {% if not form.instance.pk %}
+        <h2>Add New Kite</h2>
+        <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Save">
+    </form>
+    {% else %}
+        <h2><a href="{% url 'myapp:update' form.instance.pk %}">Update Kite?</a></h2>
+    {% endif %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kite Details--</title>
+</head>
+<body>
+    <h2>Kite Name: {{kite_detail.kite_name}}</h2>
+    {% for kite in kite_detail.kites.all %}
+    <h2>Kite Available Quantity: {{kite.available_quantity}}</h2>
+    <h2>Kite Available Colors: {{kite.available_colors}}</h2>
+    {% endfor %}
+
+</body>
+</html>
